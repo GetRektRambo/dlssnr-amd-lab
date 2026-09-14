@@ -1,0 +1,27 @@
+
+#version 450
+layout(local_size_x = 16, local_size_y = 16) in;
+layout(push_constant) uniform Push { uint DIM; } pc;
+layout(set=0,binding=0) readonly buffer A { uint a[]; };
+layout(set=0,binding=1) readonly buffer B { uint b[]; };
+layout(set=0,binding=2) writeonly buffer C { float c[]; };
+shared float tileA[16][16];
+shared float tileB[16][16];
+void main() {
+    uint row = gl_GlobalInvocationID.y;
+    uint col = gl_GlobalInvocationID.x;
+    uint lrow = gl_LocalInvocationID.y;
+    uint lcol = gl_LocalInvocationID.x;
+    uint DIM = pc.DIM;
+    if (row >= DIM || col >= DIM) return;
+    float acc = 0.0;
+    for (uint t = 0u; t < DIM; t += 16u) {
+        tileA[lrow][lcol] = unpackHalf2x16(a[row * DIM + t + lcol]).x;
+        tileB[lrow][lcol] = unpackHalf2x16(b[(t + lrow) * DIM + col]).x;
+        barrier();
+        for (uint k = 0u; k < 16u; k++)
+            acc += tileA[lrow][k] * tileB[k][lcol];
+        barrier();
+    }
+    c[row * DIM + col] = acc;
+}
