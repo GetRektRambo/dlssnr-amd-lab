@@ -1,0 +1,30 @@
+# Compiled binaries
+*.exe
+*.dll
+*.so
+vulkan_test
+tiled2
+coop_probe3
+net_sim
+tiled_fp16
+
+# Compiled shaders
+*.spv
+
+# Object files
+*.o
+
+# Proprietary/NVIDIA — never commit
+nvngx*.dll
+nvngx*.dll.*
+DLSS5/
+Streamline/
+
+# Model weights (legal boundary)
+*.onnx
+*.ckpt
+weights/
+models/
+
+# Logs and scratch
+*.log
