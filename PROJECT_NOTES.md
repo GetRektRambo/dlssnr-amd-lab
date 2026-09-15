@@ -45,3 +45,4 @@
 
 ### Raw results this session
 - see results/*.txt (vulkan_test, tiled2, coop_probe3, net_sim 720/1080)
+- FSR-Performance (960x540) NR cost: see results/net_sim_540_NAVI33.txt
