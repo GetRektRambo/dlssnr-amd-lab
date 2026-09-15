@@ -1,0 +1,3 @@
+	vendorID          = 0x1002
+	deviceID          = 0x7481
+	deviceName        = AMD Radeon Graphics (RADV NAVI33)

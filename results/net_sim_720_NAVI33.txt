@@ -1,0 +1,17 @@
+net_sim.comp
+[Net Sim] Neural-frame budget simulation
+
+[INFO] GPU: AMD Radeon Graphics (RADV NAVI33)
+[CHECK] c[0] GPU=3.19 vs CPU=3.19 -> MATCH
+
+=== NET SIM RESULTS ===
+Target: 1280x720 (4 x 512x512-equivalent stacks)
+Network: 52 layers, 52 dispatches per frame
+Workload: 16.37 GFLOP per frame
+Frames simulated: 100
+
+Time per frame:     10.775 ms
+Effective rate:     1519.7 GFLOPS sustained
+
+Budget verdict (60fps = 16.6 ms total, NR share ~3-5 ms):
+  [CAUTION] Exceeds a playable NR slice as-is.

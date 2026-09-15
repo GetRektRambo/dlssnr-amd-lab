@@ -1,0 +1,16 @@
+[DLSSNR compute test] Steam Machine RDNA3 fp16 benchmark
+
+[INFO] GPU: AMD Radeon Graphics (RADV NAVI33)
+[INFO] Vulkan driver version: 25.99.99
+[INFO] Cooperative matrix support: YES (fast tensor path available)
+[CHECK] GPU c[0]=3.19 vs CPU 3.19 -> MATCH (math works)
+
+=== RESULTS ===
+Matrix: 512x512 fp16, 200 matmuls per batch
+Total batch time:  71.226 ms
+Time per matmul:   0.356 ms
+Throughput:        753.8 GFLOPS (fp16 scalar path)
+
+How to read it: a 1080p NR pass needs roughly 5000+ GFLOPS-ish of headroom
+to be playable. This scalar test measures a fraction of what the tensor
+(cooperative matrix) path can do -- it is our floor, not the ceiling.
