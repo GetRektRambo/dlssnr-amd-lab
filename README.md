@@ -8,7 +8,7 @@ Proof-of-concept validation that RDNA3 GPUs can handle DLSS Neural Rendering–c
 
 Standalone Vulkan compute benchmarks measuring FP16 matrix multiplication throughput on Steam Machine (RADV NAVI33, SteamOS). The goal was to answer one question: **Is the hardware capable?**
 
-The answer: yes. A simulated 52-layer neural frame sustains **2.8 ms/frame** on a 512×512 FP16 baseline, fitting a realistic NR budget (3–5 ms).
+The answer: yes. A simulated 52-layer neural frame sustains **10.8 ms/frame at 720p-equivalent** (scaled benchmark) — a factor of 2–3x away from a comfortable 3–5 ms budget; cooperative-matrix path (confirmed available) is the planned route to close the gap.
 
 ## What This Is Not
 
@@ -21,7 +21,7 @@ This does **not** reimplement DLSS NR and includes no NVIDIA binaries. It measur
 | GPU | AMD Radeon Graphics (RADV NAVI33, 28 CUs) |
 | Naive FP16 matmul (512×512) | 747 GFLOPS |
 | Tiled FP16 (shared memory) | 1,459 GFLOPS |
-| Simulated NR frame (52 layers) | 2.80 ms/frame |
+| Simulated NR @ 720p-equiv (scaled) | 10.8 ms/frame |
 | Cooperative matrix support | YES (f16×f16→f32 @ 16×16×16, subgroup scope) |
 
 ## Files
