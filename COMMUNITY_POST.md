@@ -68,3 +68,9 @@ Repository with full methodology, benchmark source, and deployment artifacts:
 https://github.com/GetRektRambo/dlssnr-amd-lab
 
 Contact for collaboration
+
+## Downloadable Releases
+
+- [NR Substrate Benchmarks [Final]](https://github.com/GetRektRambo/dlssnr-amd-lab/releases/tag/benchmarks-v1.0) — test your own AMD GPU's NR budget
+- [AMD NR Forwarder-Replacement Backend v1.0](https://github.com/GetRektRambo/dlssnr-amd-lab/releases/tag/backend-stub-v1.0) — drop-in integration stub for the OptiScaler_DLSSNR fork on Linux/Proton
+- [SteamOS MinGW/Vulkan Cross-Build Kit v1.0](https://github.com/GetRektRambo/dlssnr-amd-lab/releases/tag/crossbuild-toolchain-v1.0) — build Win32 Vulkan DLLs from SteamOS

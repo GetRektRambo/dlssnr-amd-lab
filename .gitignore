@@ -28,3 +28,4 @@ models/
 
 # Logs and scratch
 *.log
+*.tar.gz
