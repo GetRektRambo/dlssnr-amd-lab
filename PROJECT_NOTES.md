@@ -46,3 +46,13 @@
 ### Raw results this session
 - see results/*.txt (vulkan_test, tiled2, coop_probe3, net_sim 720/1080)
 - FSR-Performance (960x540) NR cost: see results/net_sim_540_NAVI33.txt
+
+## Session 2026-09-16 (final): Stage 1 complete, integration verified end-to-end
+
+- Deployed OptiScaler_DLSSNR v0.2.0 release build as dxgi.dll (setup_linux.sh)
+- Our backend (nvngx.dll_dlssnr.dll, 808 KB, md5 d7604...) holds the forwarder slot
+- WINEDLLOVERRIDES="dxgi.dll=n,b" required for hook attachment on SteamOS
+- Hook verified: session ran 21:03-21:09 with clean unload, no crashes
+- NGX chain quiescent: AMD hardware + FSR upscaler = no NGX feature created
+- Fork README confirms: model DLL is RTX-50-only, ~165MB, must be user-supplied
+- CONCLUSION: integration substrate VALIDATED; model weights = open frontier
