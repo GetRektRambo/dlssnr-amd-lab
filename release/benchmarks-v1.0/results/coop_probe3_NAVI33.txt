@@ -1,0 +1,21 @@
+[Cooperative Matrix Probe v3]
+
+[INFO] GPU: AMD Radeon Graphics (RADV NAVI33)
+
+Supported cooperative matrix configurations:
+A      B      result  M x N x K   scope
+-----------------------------------------------
+u8     u8     ?       16 x 16 x 16   subgroup
+u8     u8     i32     16 x 16 x 16   subgroup
+u8     u8     i32     16 x 16 x 16   subgroup (sat)
+u8     i8     ?       16 x 16 x 16   subgroup
+u8     i8     i32     16 x 16 x 16   subgroup
+u8     i8     i32     16 x 16 x 16   subgroup (sat)
+i8     u8     ?       16 x 16 x 16   subgroup
+i8     u8     i32     16 x 16 x 16   subgroup
+i8     u8     i32     16 x 16 x 16   subgroup (sat)
+i8     i8     ?       16 x 16 x 16   subgroup
+i8     i8     i32     16 x 16 x 16   subgroup
+i8     i8     i32     16 x 16 x 16   subgroup (sat)
+f16    f16    f16     16 x 16 x 16   subgroup
+f16    f16    f32     16 x 16 x 16   subgroup

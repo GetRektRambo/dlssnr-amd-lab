@@ -1,0 +1,13 @@
+tiled2.comp
+[Tiled FP16 Benchmark v2] shared-memory tiles, 16x16
+
+[INFO] GPU: AMD Radeon Graphics (RADV NAVI33)
+[CHECK] c[0] GPU=3.19 vs CPU=3.19 -> MATCH
+
+=== RESULTS ===
+Matrix: 512x512, shared-memory tiled (16x16 tiles), 200 runs/batch
+Total batch time: 36.175 ms
+Per matmul:       0.181 ms
+Throughput:       1484.1 GFLOPS
+
+Baseline to beat: 747 GFLOPS (naive, 512x512)
