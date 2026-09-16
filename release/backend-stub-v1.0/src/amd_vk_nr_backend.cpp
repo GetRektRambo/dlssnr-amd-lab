@@ -28,7 +28,7 @@
 // Canonical NGX resource layout — use the real SDK header, not a mirror.
 // The header is declarative only (structs/enums, no driver linkage).
 // ---------------------------------------------------------------------------
-#include "../include/nvsdk_ngx_vk.h"  // vendored SDK headers
+#include "nvsdk_ngx_vk.h"  // vendored beside this file
 
 // ---------------------------------------------------------------------------
 // Per-feature state (one per created feature handle)
