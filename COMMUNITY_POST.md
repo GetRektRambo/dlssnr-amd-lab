@@ -67,4 +67,4 @@ Two paths forward that could close the gap:
 Repository with full methodology, benchmark source, and deployment artifacts:
 https://github.com/GetRektRambo/dlssnr-amd-lab
 
-Contact for collaboration: [your Discord/email here]
+Contact for collaboration
